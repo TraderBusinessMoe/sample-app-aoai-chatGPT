@@ -66,6 +66,11 @@
   width: auto;
 }
 
+.maskot {
+  height: 150px;
+  width: auto;
+}
+
 .chatMessageStream {
   flex-grow: 1;
   max-width: 1028px;
