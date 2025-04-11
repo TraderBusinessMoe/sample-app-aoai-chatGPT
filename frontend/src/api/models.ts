@@ -131,7 +131,7 @@ export type UI = {
   chat_logo?: string
   show_share_button?: boolean
   show_chat_history_button?: boolean
-  show_maskot? : boolean
+  show_mascot?: boolean
 }
 
 export type FrontendSettings = {

@@ -49,6 +49,7 @@ class _UiSettings(BaseSettings):
     favicon: str = "/favicon.svg"
     show_share_button: bool = True
     show_chat_history_button: bool = True
+    show_mascot: bool = False
 
 
 class _ChatHistorySettings(BaseSettings):
