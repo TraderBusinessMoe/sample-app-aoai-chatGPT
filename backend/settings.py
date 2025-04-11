@@ -41,12 +41,12 @@ class _UiSettings(BaseSettings):
         env_ignore_empty=True
     )
 
-    title: str = "Contoso"
+    title: str = "apetito"
     logo: Optional[str] = None
     chat_logo: Optional[str] = None
-    chat_title: str = "Start chatting"
-    chat_description: str = "This chatbot is configured to answer your questions"
-    favicon: str = "/favicon.ico"
+    chat_title: str = "Chat starten"
+    chat_description: str = "Dieser Chatbot ist so konfiguriert, dass er Ihre Fragen beantwortet. Dies ist eine sichere Umgebung für apetito."
+    favicon: str = "/favicon.svg"
     show_share_button: bool = True
     show_chat_history_button: bool = True
 
