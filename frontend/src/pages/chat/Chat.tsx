@@ -13,7 +13,7 @@ import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import styles from './Chat.module.css'
 import Apetito from '../../assets/Apetito.svg'
-import Maskot from '../../assets/TK_Kai_frei_250408.webp'
+import Mascot from '../../assets/TK_Kai_frei_250408.webp'
 import { XSSAllowTags } from '../../constants/sanatizeAllowables'
 
 import {
@@ -65,7 +65,7 @@ const Chat = () => {
   const [hideErrorDialog, { toggle: toggleErrorDialog }] = useBoolean(true)
   const [errorMsg, setErrorMsg] = useState<ErrorMessage | null>()
   const [logo, setLogo] = useState('')
-  const [maskot, setMaskot] = useState('')
+  const [mascot, setMascot] = useState('')
   const [answerId, setAnswerId] = useState<string>('')
 
   const errorDialogContentProps = {
@@ -116,7 +116,7 @@ const Chat = () => {
 
   useEffect(() => {
     if (!appStateContext?.state.isLoading) {
-      setMaskot(ui?.show_maskot ? Maskot : '')
+      setMascot(ui?.show_mascot ? Mascot : '')
     }
   }, [appStateContext?.state.isLoading])
 
@@ -813,7 +813,7 @@ const Chat = () => {
           <div className={styles.chatContainer}>
             {!messages || messages.length < 1 ? (
               <Stack className={styles.chatEmptyState}>
-                <img src={maskot} className={styles.maskot} aria-hidden="true" />
+                <img src={mascot} className={styles.mascot} aria-hidden="true" />
                 <img src={logo} className={styles.chatIcon} aria-hidden="true" />
                 <h1 className={styles.chatEmptyStateTitle}>{ui?.chat_title}</h1>
                 <h2 className={styles.chatEmptyStateSubtitle}>{ui?.chat_description}</h2>
