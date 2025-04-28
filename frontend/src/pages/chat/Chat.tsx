@@ -13,6 +13,7 @@ import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 import styles from './Chat.module.css'
 import Apetito from '../../assets/Apetito.svg'
+import ApetitoKai from '../../assets/apetito_kai_logo.webp'
 import Mascot from '../../assets/TK_Kai_frei_250408.webp'
 import { XSSAllowTags } from '../../constants/sanatizeAllowables'
 
@@ -110,7 +111,7 @@ const Chat = () => {
 
   useEffect(() => {
     if (!appStateContext?.state.isLoading) {
-      setLogo(ui?.chat_logo || ui?.logo || Apetito)
+      setLogo(ui?.chat_logo || ui?.logo || ui?.show_mascot ? ApetitoKai : Apetito)
     }
   }, [appStateContext?.state.isLoading])
 
