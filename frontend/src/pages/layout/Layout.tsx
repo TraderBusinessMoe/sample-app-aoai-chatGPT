@@ -5,6 +5,7 @@ import { CopyRegular } from '@fluentui/react-icons'
 
 import { CosmosDBStatus } from '../../api'
 import Apetito from '../../assets/Apetito.svg'
+import ApetitoKai from '../../assets/apetito_kai_logo.webp'
 import { HistoryButton, ShareButton } from '../../components/common/Button'
 import { AppStateContext } from '../../state/AppProvider'
 
@@ -42,7 +43,7 @@ const Layout = () => {
 
   useEffect(() => {
     if (!appStateContext?.state.isLoading) {
-      setLogo(ui?.logo || Apetito)
+      setLogo(ui?.logo || ui?.show_mascot ? ApetitoKai : Apetito)
     }
   }, [appStateContext?.state.isLoading])
 
